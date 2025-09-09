@@ -13,7 +13,7 @@ void loop() {
     valor = analogRead(audioPin);        // Lectura ADC (0–1023)
     voltaje = (valor * 5.0) / 1023.0;    // Conversión a voltaje (0–5 V)
 
-    // Ajuste de resolución: redondear a pasos de 0.02 V
+    // Ajuste de resolución: redondear a pasos de 0.03 V
     voltaje = round(voltaje / 0.03) * 0.03;
 
     Serial.println(voltaje, 2);          // Imprime con 2 decimales
