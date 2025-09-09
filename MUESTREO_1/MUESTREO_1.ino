@@ -17,7 +17,7 @@ void loop() {
     voltaje = round(voltaje / 0.03) * 0.03;
 
     Serial.println(voltaje, 2);          // Imprime con 2 decimales
-    delayMicroseconds(125);              // ~8 kHz de muestreo
+    delayMicroseconds(125);              // ~8 kHz de muestreo, T = 1/8000 = 125µs
   }
   // --- Fin de bloque ---
 
