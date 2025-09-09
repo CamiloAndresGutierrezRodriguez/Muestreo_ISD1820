@@ -17,7 +17,7 @@ void loop() {
     tiempos[i] = micros();                            // Tiempo en µs
     muestras[i] = analogRead(audioPin);               // Valor ADC (0–1023)
     voltajes[i] = (muestras[i] * 5.0) / 1023.0;       // Conversión a voltaje
-    delayMicroseconds(125);                           // ~8 kHz de muestreo
+    delayMicroseconds(125);                           // ~8 kHz de muestreo, T = 1/8000 = 125µs
   }
 
   // Impresión en formato: Tiempo - ADC - Voltaje
@@ -31,5 +31,5 @@ void loop() {
 
   Serial.println("--- Fin de bloque ---\n");
 
-  delay(1000); // Pausa antes del siguiente bloque
+  delay(1000); // Pausa antes de iniciar el siguiente bloque
 }
